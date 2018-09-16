@@ -30,3 +30,10 @@ steven sal joe
 might give the result:
 
 4 davis emma,jayceon jinnie,joe,sal steven,zeming
+
+# Approach
+
++ The person who has the maximum number of friends has less choices to get seated on tables. Hence the people who have more friends are seated first.
++ Graph of friends and non friends are created. The first table is filled first. The person who has maximum number of friends is placed on the first table.
++ The second person to be seated on the table is selected from the sorted non friend list of the first person. The person who has max number of friends in this sorted list,is selected. The next person to be seated is selected from the intersection of the non friends of the already seated people. The person who has the maximum number of friends is given priority. The visited and non visited list is updated when people are placed on the table.
++ When a person is to be placed on a table, the previous tables are traversed to check if there is any place available. If there is place available on the table and no people know each other, they are placed together. Finally we check if there is any person who is yet to be seated. The person is then seated on the new table.
